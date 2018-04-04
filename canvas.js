@@ -21,7 +21,7 @@ var colorArray = [
   '#D7CBFF',
 ];
 
-window.addEventListener('resize', function() {
+window.addEventListener('DOMContentLoaded', function() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
