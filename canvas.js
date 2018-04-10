@@ -28,6 +28,13 @@ window.addEventListener('DOMContentLoaded', function() {
   init();
 })
 
+window.addEventListener('resize', function() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  init();
+})
+
  
 window.addEventListener('mousemove',
   function(event) {
@@ -35,6 +42,14 @@ window.addEventListener('mousemove',
     mouse.y = event.y;
  
 })
+
+
+window.addEventListener('touchmove',
+  function(event) {
+    for (var i=0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  }, false);
 
 
 function Circle(x, y, dx, dy, radius, color) {
